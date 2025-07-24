@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(37, 6, 6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(55, 3, 104);
+    
+ 
+}
+
+.container {
+    background-color: rgb(55, 3, 104);
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 70px;
+}
+a {
+    text-decoration: none;  
+}
+h2 {
+    color: black;
+}
+h2:hover {
+    color: wheat;
+}
+.projeto1 {
+    background-color: wheat;
+    padding: 17px 24px;
+    border-radius: 20px;
+}
+.projeto1:hover {
+   background-color:  rgb(31, 30, 30);
+}
+.projeto2 {
+    background-color: wheat;
+    padding: 17px 23px;
+    border-radius: 20px;
+}
+.projeto2:hover {
+    background-color:  rgb(31, 30, 30); 
+}
+.projeto3 {
+    background-color: wheat;
+    padding: 17px 23px;
+    border-radius: 20px;
+    
+}
+.projeto3:hover {
+    background-color:  rgb(31, 30, 30); 
+    
+}
+
+
+
+
+.voltar {
+    
+    margin-left: 20px;
+   
+}
+h1 {
+    color: wheat;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1:hover {
+    color: rgb(161, 156, 145);
+}

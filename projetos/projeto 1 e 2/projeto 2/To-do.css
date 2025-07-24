@@ -1,0 +1,89 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input.tarefa {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button.adicionar {
+
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.adicionar:hover {
+  background-color: #45a049;
+}
+
+ul#lista {
+  margin-top: 30px;
+  list-style: none;
+  width: 300px;
+  padding: 0;
+}
+
+ul#lista li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+/* Mensagem de erro centralizada */
+#mensagem {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e74c3c;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.visivel {
+  display: block;
+}
+
+.oculta {
+  display: none;
+}

@@ -1,0 +1,92 @@
+html, body {
+    overflow: hidden; /*nao deixa ter barra de rolagem*/
+}
+
+body {
+    margin: 0;
+    height: 120vh;
+    background: linear-gradient(135deg, black 50%, white 50%);
+    animation: fundoLoop 3s ease-in-out infinite;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.div1 {
+    margin-bottom: 70px;
+}
+
+.jordan {
+    height: 40px;
+    
+}
+
+.container {
+    margin: 30px 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagem-tenis {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tenisjordan {
+    width: 450px;
+    transform: rotate(-25deg) translateY(0); /* já incluído na animação */
+    margin-right: 100px;
+    animation: flutuar 3s ease-in-out infinite;
+    filter: drop-shadow(25px 35px 20px rgba(0, 0, 0, 0.4));
+    
+}
+
+
+/* Botão/link */
+a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+a:hover {
+    background-color: #5a1414;
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+/* ANIMAÇÕES ADICIONADAS */
+
+/* Fundo mudando de branco para vermelho e voltando */
+@keyframes fundoLoop {
+    0% {
+        background: linear-gradient(135deg, black 50%, white 50%);
+    }
+    50% {
+        background: linear-gradient(135deg, black 50%, #5a1414 50%);
+    }
+    100% {
+        background: linear-gradient(135deg, black 50%, white 50%);
+    }
+}
+
+/* Tênis flutuando */
+@keyframes flutuar {
+    0%, 100% {
+        transform: rotate(-25deg) translateY(0);
+       
+    }
+    50% {
+        transform: rotate(-25deg) translateY(-20px);
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,1 @@
+window.alert ("SEJA BEM-VINDO A MINHA PAGINA!")
