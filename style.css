@@ -13,6 +13,7 @@ html {
 
 header {
     height: 470px;
+    width: auto;
     background-color: rgb(106, 4, 201);
     display: flex;
     flex-direction: column;
@@ -25,13 +26,14 @@ ul {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 80px;
+    gap: 9rem;
 }
 li {
     list-style: none;
 }
 a {
     text-decoration: none;
-    margin: 70px;
+    
     color: white;
     font-size: 17px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -58,8 +60,10 @@ p {
 }
 /*HEADER*/
 main {
-    height: 830px;
+    height: auto;
+    min-height: 100vh;
     text-align: center;
+    padding: 40px;
 }
 #titulo1 {
     margin: 65px 0 10px 20px;
@@ -141,6 +145,7 @@ aside {
     display: flex;
     justify-content: center;
     margin: 0px 200px 0px 200px;
+    gap: 9rem;
 }
 .linkedin-logo {
     height: 55px;
@@ -164,9 +169,95 @@ footer {
 }
 .direitos {
     font-size: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     
 }
 a:hover{
     color: rgb(55, 3, 104);
 }
+
+
+@media (max-width: 768px) {
+
+    /* NAVBAR EM COLUNA */
+    ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 20px 0;
+        gap: 10px;
+    }
+
+    a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* TEXTOS AJUSTADOS */
+    .texto1,
+    .texto2 {
+        margin: 0 20px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    /* FOTO E DIV EM COLUNA */
+    div {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .minhafoto {
+        height: auto;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    /* REDES SOCIAIS EM COLUNA */
+    .div2,
+    .redes {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .LinkedIn-escrita,
+    .github-escrita {
+        font-size: 28px;
+    }
+
+    .github-logo,
+    .linkedin-logo {
+        height: 60px;
+    }
+
+    /* HEADER TEXTOS AJUSTADOS */
+    header p {
+        font-size: 28px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .span3 {
+        font-size: 16px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    /* AJUSTES GERAIS */
+    main {
+        padding: 20px;
+    }
+
+    .titulo2 {
+        margin: 50px 10px 30px;
+    }
+
+    aside {
+        height: auto;
+        padding: 20px 0;
+        grid-template-rows: auto;
+    }
+}
+
