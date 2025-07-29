@@ -5,6 +5,7 @@ Este é meu portfólio pessoal desenvolvido com HTML, CSS e JavaScript, onde apr
 🚀 **O que você vai encontrar aqui:**
 - Projetos que desenvolvi ou estou desenvolvendo
 - Um pouco da minha trajetória e objetivos na área de tecnologia
+- Minha habilidades aplicadas
 - Link para meu currículo atualizado
 - Contato e redes sociais
 
