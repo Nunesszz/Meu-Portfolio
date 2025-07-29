@@ -17,7 +17,7 @@ header {
     background-color: rgb(106, 4, 201);
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 0px 0px 6px 6px black;
     
 }
 ul {
@@ -103,7 +103,7 @@ aside {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 200px 50px 10px 150px;
-    box-shadow: -5px -5px 5px black;   /*deixa a sombra do lado de cima*/
+    box-shadow: 0px 0px 6px 6px black;   /*deixa a sombra do lado de cima*/
 }
 .div2 {
     display: flex;
@@ -176,23 +176,7 @@ a:hover{
     color: rgb(55, 3, 104);
 }
 
-
-@media (max-width: 768px) {
-
-    /* NAVBAR EM COLUNA */
-    ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 20px 0;
-        gap: 10px;
-    }
-
-    a {
-        margin: 0;
-        font-size: 16px;
-    }
-
-    /* TEXTOS AJUSTADOS */
+@media (max-width: 1200px) {
     .texto1,
     .texto2 {
         margin: 0 20px;
@@ -209,7 +193,7 @@ a:hover{
 
     .minhafoto {
         height: auto;
-        max-width: 60%;
+        max-width: 20%;
         margin: 0 auto;
     }
 
@@ -233,17 +217,9 @@ a:hover{
     }
 
     /* HEADER TEXTOS AJUSTADOS */
-    header p {
-        font-size: 28px;
-        margin: 10px;
-        text-align: center;
-    }
+   
 
-    .span3 {
-        font-size: 16px;
-        margin: 10px;
-        text-align: center;
-    }
+    
 
     /* AJUSTES GERAIS */
     main {
@@ -261,3 +237,108 @@ a:hover{
     }
 }
 
+
+@media (max-width: 768px) {
+
+    /* NAVBAR EM COLUNA */
+    ul {
+        flex-direction: row;
+        padding: 0;
+        margin: 50px 0;
+        gap: 3rem;
+    }
+    a {
+        margin: 0;
+        font-size: 16px;
+    }
+    /* TEXTOS AJUSTADOS */
+    .texto1,
+    .texto2 {
+        margin: 0 20px;
+        font-size: 16px;
+        text-align: justify;
+    }
+    /* FOTO E DIV EM COLUNA */
+    div {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .minhafoto {
+        height: auto;
+        max-width: 20%;
+        margin: 0 auto;
+    }
+    /* REDES SOCIAIS EM COLUNA */
+    .div2,
+    .redes {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        gap: 10px;
+    }
+    .LinkedIn-escrita,
+    .github-escrita {
+        font-size: 28px;
+    }
+    .github-logo,
+    .linkedin-logo {
+        height: 60px;
+    }
+    /* HEADER TEXTOS AJUSTADOS */
+    header p {
+        font-size: 28px;
+        margin: 10px;
+        text-align: center;
+    }
+    .span3 {
+        font-size: 16px;
+        margin: 10px;
+        text-align: center;
+    }
+    /* AJUSTES GERAIS */
+    main {
+        padding: 20px;
+    }
+    .titulo2 {
+        margin: 50px 10px 30px;
+    }
+    .numero,
+    .felipe {
+        margin: auto;
+    }
+    aside {
+        height: auto;
+        padding: 20px 0;
+        grid-template-rows: auto;
+        
+    }
+}
+@media (max-width: 485px) {
+    ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .span1,
+    .span2 {
+        font-size: 22px;
+    }
+    .span3 {
+        font-size: 10px;
+    }
+    .div2 {
+        margin: auto;
+    }
+    .direitos {
+        margin: auto;
+        font-size: 12px;
+    }
+    .numero,
+    .felipe {
+        margin: auto;
+        font-size: 20px;
+    }   
+}
