@@ -32,13 +32,5 @@ function adicionar() {
 }
 
 //procurar entender tudo que foi feito aqui
-
-
-
-
-
-
-
-
 //Depois tirar duvidas de tudo que fez, por exeplo: 
 // o que é appenchild e createElement e o que eles fazem
