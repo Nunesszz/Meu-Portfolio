@@ -1,0 +1,11 @@
+{
+    "Nome": "Felipe",
+    "Idada": 23,
+    "Trabalhando_atualmente": false,
+    "Detalhes_profissao": {
+        "Cargo": "Programador Front End",
+        "Empresa": false,
+    "Hobbies": ["Jogar", "Ler", "Academia"]
+        
+    } 
+}
