@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box; /*calculo correto sem soma*/
+    font-size: 40px;
+    background-color: rgb(255, 236, 150); /* modo dia */
+    transition: background-color 0.4s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body.noite {
+    background-color: #1c1c1c; /* modo noite */
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 35rem;
+}
+
+button {
+    margin-top: 2rem;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: #928c56; /* amarelo claro (modo dia) */
+    position: relative;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+}
+
+button .bola {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+    
+}
+
+button.ativo {
+    background-color: #333; /* modo noite */
+}
+
+button.ativo .bola {
+    transform: translateX(140px);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO | TO-DO LIST</title>
+    <link rel="stylesheet" href="To-do.css">
+    <link rel="shortcut icon" href="../img/meu_favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <header>
+        Lista de Tarefas
+        <hr>
+    </header>
+    <main>
+        <div class="principal">
+            <label for="selecione">Adicione Tarefas:</label>
+            <input type="text" class="tarefa" placeholder="Digite..." required>
+            <button onclick="adicionar()" class="adicionar">Adicionar</button>
+
+            <ul id="lista"></ul>
+            <div id="mensagem" class="oculta">Digite uma tarefa...</div>
+        </div>
+    </main>
+
+
+
+    <script src="To-do.js"></script>
+</body>
+
+</html>

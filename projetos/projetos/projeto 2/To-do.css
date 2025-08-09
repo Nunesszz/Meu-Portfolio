@@ -17,7 +17,7 @@ body {
 
 label {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: auto;
   color: #333;
 }
 
@@ -27,17 +27,19 @@ input.tarefa {
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 10px;
+  margin: auto;
+  margin-top: 1rem;
+  border-color: #333; /*para adicionar cor a borda*/
 }
 
 button.adicionar {
-
+  margin: 0 25px 0 25px;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
-  font-weight: bold;
+  font-weight: bold; /*muda a largura da letra*/
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -52,6 +54,7 @@ ul#lista {
   list-style: none;
   width: 300px;
   padding: 0;
+  
 }
 
 ul#lista li {
@@ -86,4 +89,9 @@ ul#lista li {
 
 .oculta {
   display: none;
+}
+div.principal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
 }
