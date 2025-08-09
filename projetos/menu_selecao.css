@@ -70,3 +70,10 @@ h1 {
 h1:hover {
     color: rgb(161, 156, 145);
 }
+
+@media (max-width: 610px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

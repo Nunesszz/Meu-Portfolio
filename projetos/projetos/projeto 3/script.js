@@ -5,3 +5,4 @@ botao.onclick = () => {
     document.body.classList.toggle('noite');
 };
 
+//botao.addeventlistenner('click () => {}')
