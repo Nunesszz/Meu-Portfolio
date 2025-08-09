@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +28,7 @@ input.tarefa {
   border-radius: 4px;
   margin: auto;
   margin-top: 1rem;
-  border-color: #333; /*para adicionar cor a borda*/
+  border-color: #333; /* para adicionar cor à borda */
 }
 
 button.adicionar {
@@ -39,7 +38,7 @@ button.adicionar {
   background-color: #4CAF50;
   color: white;
   border: none;
-  font-weight: bold; /*muda a largura da letra*/
+  font-weight: bold; /* muda a largura da letra */
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -54,10 +53,12 @@ ul#lista {
   list-style: none;
   width: 300px;
   padding: 0;
-  
 }
 
 ul#lista li {
+  display: flex;  /* Alinha o texto e o botão "X" na mesma linha */
+  justify-content: space-between;  /* Garante que o texto e o botão fiquem afastados */
+  align-items: center;  /* Alinha verticalmente os itens */
   background-color: #fff;
   margin-bottom: 10px;
   padding: 12px;
@@ -65,6 +66,21 @@ ul#lista li {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   font-size: 16px;
   color: #333;
+}
+
+.remove {
+  background-color: #45a049;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove:hover {
+  background-color: darkred;
 }
 
 /* Mensagem de erro centralizada */
@@ -90,6 +106,7 @@ ul#lista li {
 .oculta {
   display: none;
 }
+
 div.principal {
   display: flex;
   flex-direction: column;
