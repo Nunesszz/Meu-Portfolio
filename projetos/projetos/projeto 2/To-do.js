@@ -1,41 +1,40 @@
-function adicionar() {
-    const digite = document.querySelector('input.tarefa');
-    const escrita = digite.value;
+// Colocar valor input - OK
+//Criar um botao X de remover - OK
+//Adicionar LocalSotage
 
-    // Verifica se o campo está vazio
-    if (escrita === '') {
-        document.body.style.background = 'red';
+const meuInput = document.querySelector('.input');
+const botao = document.querySelector('.button');
+const resultado = document.querySelector('#lista');
 
-        const msg = document.getElementById('mensagem');
-        msg.classList.add('visivel');
+botao.addEventListener('click', () => {
+    const valorInput = meuInput.value.trim();
 
-        setTimeout(() => {
-            msg.classList.remove('visivel');
-            document.body.style.background = 'white';
-        }, 1000);
-        return;
+
+    if (valorInput !== '') {
+        const tagLi = document.createElement('li');
+        tagLi.textContent = valorInput
+        const botaoRemover = document.createElement('button')
+        botaoRemover.textContent = 'X'
+
+        tagLi.appendChild(botaoRemover)
+        resultado.appendChild(tagLi)
+
+        //LOCALSTORAGE
+
+        localStorage.setItem("Nome", meuInput.value)
+
+        botaoRemover.addEventListener('click', () => {
+            tagLi.remove()
+        })
+
+
+        meuInput.value = ''
+
     }
 
-    // Criação do item da lista (li)
-    const li = document.createElement('li');
-    li.textContent = escrita;
 
-    // Criação do botão "X" para remoção
-    const botaoRemover = document.createElement('button');
-    botaoRemover.textContent = 'X';
-    botaoRemover.classList.add('remove');
 
-    // Adiciona o evento de clique para remover o item da lista
-    botaoRemover.addEventListener('click', () => {
-        li.remove();  // Remove o item da lista ao clicar no botão "X"
-    });
 
-    // Adiciona o botão "X" ao item da lista
-    li.appendChild(botaoRemover);
+})
 
-    // Adiciona o item da lista à lista principal
-    document.getElementById('lista').appendChild(li);
 
-    // Limpa o campo de entrada
-    digite.value = '';
-}

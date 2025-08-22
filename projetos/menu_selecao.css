@@ -53,10 +53,6 @@ h2:hover {
     background-color:  rgb(31, 30, 30); 
     
 }
-
-
-
-
 .voltar {
     
     margin-left: 20px;
@@ -70,7 +66,6 @@ h1 {
 h1:hover {
     color: rgb(161, 156, 145);
 }
-
 @media (max-width: 610px) {
     .container {
         display: flex;

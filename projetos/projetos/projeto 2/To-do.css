@@ -20,7 +20,7 @@ label {
   color: #333;
 }
 
-input.tarefa {
+input.input {
   padding: 10px;
   font-size: 16px;
   width: 250px;
@@ -31,7 +31,7 @@ input.tarefa {
   border-color: #333; /* para adicionar cor à borda */
 }
 
-button.adicionar {
+button.button {
   margin: 0 25px 0 25px;
   margin-top: 10px;
   padding: 10px 20px;
@@ -44,7 +44,7 @@ button.adicionar {
   transition: background-color 0.3s ease;
 }
 
-button.adicionar:hover {
+button.button:hover {
   background-color: #45a049;
 }
 
@@ -68,7 +68,7 @@ ul#lista li {
   color: #333;
 }
 
-.remove {
+button {
   background-color: #45a049;
   color: white;
   border: none;
@@ -79,7 +79,7 @@ ul#lista li {
   transition: background-color 0.3s ease;
 }
 
-.remove:hover {
+button:hover {
   background-color: darkred;
 }
 
@@ -103,9 +103,7 @@ ul#lista li {
   display: block;
 }
 
-.oculta {
-  display: none;
-}
+
 
 div.principal {
   display: flex;
