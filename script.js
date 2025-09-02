@@ -1,35 +1,55 @@
-window.alert ("SEJA BEM-VINDO A MINHA PAGINA!")
+document.addEventListener("DOMContentLoaded", () =>{
+    // Revela seções principais
+    ScrollReveal().reveal('section', {
+        delay: 200,
+        distance: '40px',
+        origin: 'bottom',
+        duration: 1000,
+        easing: 'ease-in-out',
+        reset: true,
+        viewFactor: 0.1
+    });
 
+    // Revela sua foto com efeito da direita
+    ScrollReveal().reveal('.minhafoto', {
+        delay: 300,
+        distance: '60px',
+        origin: 'right',
+        duration: 1000,
+        easing: 'ease-in-out',
+        reset: true,
+        viewFactor: 0.2
+    });
 
-const object = [
-    {
-    "Nome": "Felipe",
-    "Idade": 23,
-    "Trabalhando_atualmente": false,
-    "Detalhes_profissao": {
-        "Cargo": "Programador Front End",
-        "Empresa": false,
-    "Hobbies": ['Jogar', 'Ler', 'Academia']
-        
-    } 
-}
-]
+    // Revela elementos de contato
+    ScrollReveal().reveal('.contato-item', {
+        delay: 300,
+        distance: '30px',
+        origin: 'left',
+        interval: 100,
+        duration: 800,
+        viewFactor: 0.3,
+        reset: true
+    });
 
+    // Revela a barra de redes sociais
+    ScrollReveal().reveal('.redes', {
+        delay: 400,
+        distance: '30px',
+        origin: 'bottom',
+        duration: 800,
+        viewFactor: 0.3,
+        reset: true
+    });
+   
+});
 
-    //Enviando Dados
+//efeito de "Bem-vindo"
+window.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("welcome-overlay");
 
-    //converte objeto para JSON
-    const conversor = JSON.stringify(object)
-        console.log(conversor)
-        console.log(typeof conversor) //aqui ele mostra que estará em String
-    
-    // convertendo para Objeto
-    //recebendo Dados via JSON
-    const objeto = JSON.parse(conversor)
-        console.log(objeto)
-        console.log(typeof objeto) //aqui mostrará que é objeto
-     
-
-    objeto.map((pessoa) =>
-        console.log(`Esta me retornando ${pessoa.Nome}` )
-    )
+    // Aguarda 2,5 segundos e esconde o overlay
+    setTimeout(() => {
+        overlay.classList.add("hidden");
+    }, 2500);
+});

@@ -2,47 +2,112 @@ const meuInput = document.querySelector('.input');
 const botao = document.querySelector('.button');
 const resultado = document.querySelector('#lista');
 
-// Carrega as tarefas salvas ao iniciar
-window.addEventListener('DOMContentLoaded', () => {
-  const tarefas = JSON.parse(localStorage.getItem('Tarefas')) || [];
-  tarefas.forEach((tarefa) => {
-    adicionarTarefaNaTela(tarefa);
-  });
-});
+// --- LÓGICA DO BAGUI TODO AI ---
 
-botao.addEventListener('click', () => {
-  const valorInput = meuInput.value.trim();
+// 1. CARREGA E MOSTRA AS TAREFAS SALVAS QUANDO A PÁGINA ABRE
 
-  if (valorInput !== '') {
-    adicionarTarefaNaTela(valorInput);
-    salvarTarefa(valorInput);
-    meuInput.value = '';
-  }
-});
+//TUDO QUE ESTIVER DENTRO DO PARENTESES SERÁ REFERENCIA
+    window.addEventListener('DOMContentLoaded', () => {
+        // Pega as tarefas salvas (se não houver, retorna um array vazio [])
 
-function adicionarTarefaNaTela(texto) {
-  const tagLi = document.createElement('li');
-  tagLi.textContent = texto;
+        //ou seja "tudo que estiver na minha 'tarefa', ele vai pegar 'getItem', vai salvar 'localstorage', e converter para array 'JSON.parse'", senao ele irá retornar uma array vazia
+        const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
-  const botaoRemover = document.createElement('button');
-  botaoRemover.textContent = 'X';
-  tagLi.appendChild(botaoRemover);
-  resultado.appendChild(tagLi);
+        // Para cada tarefa salva, cria ela na tela
 
-  botaoRemover.addEventListener('click', () => {
-    tagLi.remove();
-    removerTarefa(texto);
-  });
-}
+        //o "elementosSalvos" vai representar de uma forma geral o "tarefasSalvas.forEach"
+        // vou rodar cada item dentro do array, e quero que ele me retorne uma funcao de "criarElementoTarefa" que estará toda essa informaçao dentro do meu "(elementosSalvos)"
+        tarefasSalvas.forEach(elementosSalvos => {
+            criarElementoTarefa(elementosSalvos);
+        });
+    });
 
-function salvarTarefa(tarefa) {
-  const tarefas = JSON.parse(localStorage.getItem('Tarefas')) || [];
-  tarefas.push(tarefa);
-  localStorage.setItem('Tarefas', JSON.stringify(tarefas));
-}
 
-function removerTarefa(tarefa) {
-  let tarefas = JSON.parse(localStorage.getItem('Tarefas')) || [];
-  tarefas = tarefas.filter((t) => t !== tarefa);
-  localStorage.setItem('Tarefas', JSON.stringify(tarefas));
-}
+
+
+
+
+
+
+
+
+
+    // 2. ADICIONA UMA NOVA TAREFA AO CLICAR NO BOTÃO
+    botao.addEventListener('click', () => {
+        const valorInput = meuInput.value.trim();
+
+        if (valorInput !== '') {
+            //JSON parse, converte de string para ARRAY
+            //getItem ele PEGA dados salvos
+            //"Tarefa" é uma forma de buscar tudo que esta dentro de um setItem
+
+            // tudo que tiver na minha tarefa, ele ira pegar e transformar em um array
+            const tarefasAtuais = JSON.parse(localStorage.getItem("tarefas")) || [];
+            tarefasAtuais.push(valorInput);
+            //converte para string novamente, que é o correto. Porque ele so le em strings
+            localStorage.setItem("tarefas", JSON.stringify(tarefasAtuais));
+
+
+
+            //ele esta armazenando o valorinput para a funçao
+           criarElementoTarefa(valorInput);
+
+            
+         
+            meuInput.value = '';
+        }
+    });
+
+    // 3. FUNÇÃO AUXILIAR PARA CRIAR O HTML DA TAREFA
+    function criarElementoTarefa(texto) {
+        const tagLi = document.createElement('li');
+        tagLi.textContent = texto;
+
+        const botaoremover = document.createElement('button');
+        botaoremover.textContent = "X";
+
+        tagLi.appendChild(botaoremover);
+        resultado.appendChild(tagLi);
+
+        // Adiciona o evento de remover
+        botaoremover.addEventListener('click', () => {
+            // Pega a lista de tarefas
+            const tarefasAtuais = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+            // Cria uma NOVA lista sem a tarefa que foi clicada
+            const tarefasFiltradas = tarefasAtuais.filter(tarefa => tarefa !== texto);
+
+            // Salva a nova lista (sem o item removido)
+            localStorage.setItem("tarefas", JSON.stringify(tarefasFiltradas));
+
+            // Remove o elemento da tela
+            tagLi.remove();
+        });
+    }
+
+
+
+    /*
+    | Função                  | O que faz                                                    | Exemplo                                  |
+| ----------------------- | ------------------------------------------------------------ | ---------------------------------------- |
+| `setItem(chave, valor)` | **Salva** um valor no navegador (como se fosse uma caixinha) | `localStorage.setItem("nome", "João")`   |
+| `getItem(chave)`        | **Pega** o valor que foi salvo                               | `localStorage.getItem("nome") // "João"` |
+
+    
+
+
+
+
+
+
+
+🧠 Dica prática
+
+Toda vez que você for usar localStorage com arrays ou objetos, pense sempre assim:
+
+// Salvando
+localStorage.setItem('chave', JSON.stringify(arrayOuObjeto));
+
+// Lendo
+const dados = JSON.parse(localStorage.getItem('chave')) || [];
+    */

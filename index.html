@@ -7,7 +7,11 @@
     <link rel="shortcut icon" href="image/meu_favicon.png" type="image/x-icon">
     <title>MEU SITE | FELIPE DEV</title>
 </head>
+<!--Minha mensagem de bem-vindo -->
 <body id="principal">
+    <div id="welcome-overlay">
+    <div class="welcome-message">Olá!! Seja Bem-Vindo Ao Meu Portfólio </div>
+</div>
     <!--HEADER-->
         <header>
         <nav>
@@ -15,7 +19,8 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="#titulo1">Sobre mim</a></li>
                 <li><a href="projetos/menu_selecao.html">Projetos</a></li>
-                <li><a href="Currículo - Felipe Nunes Da Silva.pdf" download >Meu Currículo</a></li>
+                <li><a class="botao-download" href="Currículo - Felipe Nunes Da Silva.pdf" download >Meu Currículo</a></li>
+                <a href="#principal" class="voltar-topo">↑</a>
             </ul>
         </nav>
             <p>
@@ -33,7 +38,7 @@
         </section>
         <section>
             <h2 class="titulo2">Um pouco mais sobre mim</h2>
-            <div>
+            <div class="sobreMim">
             <p class="texto2">
             Sou Felipe, desenvolvedor front-end em formação, apaixonado por tecnologia e por criar interfaces modernas e responsivas. Estou focado em construir projetos com HTML, CSS, JavaScript e React, sempre buscando evoluir e entregar experiências incríveis na web.
             </p>
@@ -72,7 +77,17 @@
         <p class="direitos">&copy; TODOS OS DIREITOS RESERVADOS - FELIPE DEV 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+
+
+    
+    <!-- Biblioteca ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Seu script.js -->
+<script src="script.js"></script>
+
+
+
     
 </body>
 </html>
