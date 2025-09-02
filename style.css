@@ -252,17 +252,24 @@ aside {
 }
 .linkedin-logo {
     height: 55px;
+    padding: 10px;
 }
-.LinkedIn-escrita {
-    font-size: 36px;
-}
+
 .github-logo {
     height: 90px;
 }
-.github-escrita {
-    font-size: 38px;
-
+.github-escrita, .LinkedIn-escrita {
+    cursor: pointer; /* mostra a mãozinha */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: underline; /* já deixa sublinhado para mostrar que é link */
+    color: white; /* cor padrão */
 }
+.github-escrita:hover, .LinkedIn-escrita:hover {
+    color: #6a04c9; /* cor roxa vibrante no hover */
+    text-decoration: none; /* remove o sublinhado no hover para efeito visual */
+    filter: drop-shadow(0 0 4px #6a04c9); /* sombra roxa leve para destacar */
+}
+
 footer {
     color: white;
     background-color: #1d002b;
@@ -343,8 +350,14 @@ a:hover{
 
 
 @media (max-width: 768px) {
+    /*--- ajustando bem-vindo ---*/
+    .welcome-message {
+        font-size: 28px; 
+        padding: 0 20px; 
+        text-align: center; 
+    }
 
-    /* NAVBAR EM COLUNA */
+    /*--- NAVBAR EM COLUNA ---*/
     ul {
         flex-direction: row;
         padding: 0;
@@ -419,6 +432,10 @@ a:hover{
     }
 }
 @media (max-width: 485px) {
+    .welcome-message {
+        font-size: 20px; /* ainda menor em celulares */
+        padding: 0 15px;
+    }
     ul {
         flex-direction: row;
         gap: 1rem;
