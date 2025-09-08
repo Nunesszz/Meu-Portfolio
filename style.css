@@ -168,7 +168,8 @@ main {
     color: black;
     
 }
-.texto1 {
+.texto1,
+.texto2 {
     color: black;
     font-size: 17px;
     margin: 0 400px 0 400px;
@@ -184,12 +185,7 @@ div {
     align-items: center;     
     gap: 60px;             
 }
-.texto2 {
-    color: black;
-    font-size: 17px;
-    margin: 0 400px 0 400px;
-    
-}
+
 .minhafoto {
     height: 350px;
     border-radius: 20px;
@@ -328,9 +324,6 @@ a:hover{
 
 
     /* HEADER TEXTOS AJUSTADOS */
-   
-
-    
 
     /* AJUSTES GERAIS */
     main {
@@ -373,7 +366,7 @@ a:hover{
     .texto2 {
         margin: 0 20px;
         font-size: 16px;
-        text-align: justify;
+        text-align: center;
     }
     /* FOTO E DIV EM COLUNA */
     div {
@@ -444,6 +437,12 @@ a:hover{
     h3 {
         font-size: 20px;
     }
+    .texto1,
+    .texto2 {
+        margin: auto;
+        font-size: 16px;
+        text-align: center;    /*TEXTO AJUSTADO*/
+    }
     .span1,
     .span2 {
         font-size: 2rem;
@@ -467,5 +466,5 @@ a:hover{
     .minhafoto {
         max-width: 30%;
     }
-    
+   
 }
