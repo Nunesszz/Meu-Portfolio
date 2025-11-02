@@ -54,7 +54,8 @@ html {
 header {
     height: 470px;
     width: auto;
-    background: linear-gradient(135deg, #000113, #4c0073);
+    background: linear-gradient(135deg, #9d50bb, #6e48aa, #3498db);
+
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 6px 6px black;
@@ -138,7 +139,7 @@ p {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #6a04c9;
+    background-color: #6e48aa;
     color: white;
     font-size: 24px;
     text-decoration: none;
@@ -153,7 +154,7 @@ p {
 }
 
 .voltar-topo:hover {
-    background-color: #4c0073;
+    background-color: #813ca3;
 }
 
 /*HEADER*/
@@ -163,6 +164,7 @@ main {
     text-align: center;
     padding: 40px;
 }
+
 #titulo1 {
     margin: 65px 0 10px 20px;
     color: black;
@@ -177,7 +179,7 @@ main {
 .titulo2 {
     color: black;
     text-align: center;
-    margin: 150px 2px 60px 20px;
+    margin: 65px 0 10px 20px;
 }
 div {
     display: flex;
@@ -189,7 +191,13 @@ div {
 .minhafoto {
     height: 350px;
     border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
+
 .sobreMim {
     display: flex;
     flex-direction: column;
@@ -198,7 +206,7 @@ div {
 /*barra final*/
 aside {
     height: 400px;
- background: linear-gradient(135deg, #000113, #4c0073);
+    background: linear-gradient(135deg, #9d50bb, #6e48aa, #3498db);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 200px 50px 10px 150px;
@@ -223,6 +231,7 @@ aside {
 }
 .email {
     height: 55px;
+    background-color: ;
 }
 .felipe {
     font-size: 25px;
@@ -265,10 +274,15 @@ aside {
     text-decoration: none; /* remove o sublinhado no hover para efeito visual */
     filter: drop-shadow(0 0 4px #6a04c9); /* sombra roxa leve para destacar */
 }
+/* Deixa os ícones em branco */
+.email, .github-logo, .whatsapp, .linkedin-logo {
+    filter: brightness(0) invert(1); /* transforma a imagem em branco */
+}
+
 
 footer {
     color: white;
-    background-color: #1d002b;
+    background: #6e48aa;
     text-align: center;
     display: flex;
     justify-content: center;

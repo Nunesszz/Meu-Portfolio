@@ -1,16 +1,15 @@
 body{
-    background-color: rgb(37, 6, 6);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1d002b;
+    background-color: #6e48aa;
     
  
 }
 
 .container {
-    background-color: #1d002b;
+    
     height: 450px;
     display: flex;
     justify-content: center;
@@ -24,13 +23,11 @@ a {
 h2 {
     color: black;
 }
-h2:hover {
-    color: rgb(46, 38, 22);
-}
+
 .projeto1,
 .projeto2,
 .projeto3 {
-    background-color: rgb(148, 134, 108);
+    background-color: rgb(49, 47, 43);
     padding: 17px 24px;
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
